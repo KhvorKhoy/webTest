@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Roboto", sans-serif;;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+}
+
+.container{
+    margin-top: 0;
+}
+
+
+.navManuLeft{
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(27, 146, 237 );
+    height: 85vh;
+    width: 8rem;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, .3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0 5px 5px 0;
+    gap: 1rem;
+}
+.navManuLeft .itemicon{
+    padding-left:5px ;
+    background-color: blue;
+    
+}
+
+.navManuLeft a{
+    padding: 8px 7px;
+    background-color: red;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    color: #fff;
+
+
+}
+
+.navManuLeft a span{
+    font-size: 1rem;
+    padding-left: 10px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 50px;
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+    padding-top: 10px;
+    position: relative;
+}
+
+.top .logo{
+    width: 120px;
+    height: 120px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top .logo img{
+    width: 115px;
+    border-radius: 50%;
+}
+
+.top .containerSearch{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(180, 74, 74, 0.3);
+    overflow: hidden;
+}
+
+.top .containerSearch .search{
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding-right: 95px;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0,.5);
+    position: relative;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+.top .containerSearch i{
+    background-color: rgba(0, 0, 0, .3);
+    padding: 8px 35px;
+    font-size: 1.4rem;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    right: 0;
+}
+
+.top .containerSearch i:hover{
+    background-color: rgba(0, 0, 0, .4);
+    color: #eee;
+}
+
+.containerNav{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(27, 146, 237);
+    height: 10vh;
+    padding-inline:50px ;
+    position: sticky;
+    top: 0;
+}
+
+.containerNav .nav{
+    display: flex;
+    align-items: center;
+}
+
+.containerNav .nav .icon{
+
+    background-color: transparent;
+}
+
+.containerNav .nav .icon a{
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: grid;
+    text-align: center;
+    cursor: pointer;
+    gap: 7px;
+
+}
+
+.containerNav .nav .icon a:hover{
+    background-color: rgba(0, 0, 0, .3);
+}
+
+
+
+.containerPro{
+    background: linear-gradient(to right, #ebe9e9, rgb(210, 208, 208));
+    width: 100%;
+    display: grid;
+    justify-content: center;
+
+}
+
+.containerPro .product{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.containerPro .product .cardPro{
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, .3);
+    transition: all 1s ease;
+
+}
+
+.containerPro .product .cardPro:hover{
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, .4);
+}
+.containerPro .product .cardPro img{
+    width: auto;
+}
+
+
+
+@media screen and (max-width:1500px) {
+    .containerPro .product{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .containerPro .product .cardPro{
+        width: 300px;
+    }
+}
+@media screen and (max-width:1330px) {
+    .containerPro .product{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .containerPro .product .cardPro{
+        width: 250px;
+    }
+}
+@media screen and (max-width:1110px) {
+    .containerPro .product{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .containerPro .product .cardPro{
+        width: 300px;
+    }
+}
+@media screen and (max-width:990px) {
+
+    .containerPro .product{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .containerPro .product .cardPro{
+        width: 250px;
+    }
+}
+@media screen and (max-width:860px) {
+    .containerNav .nav .icon a{
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .containerPro .product{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .containerPro .product .cardPro{
+        width: 300px;
+    }
+    .top .logo{
+        width: 105px;
+        height: 105px;
+    }
+    .top .logo img{
+        width: 100px;
+    }
+
+}
+
+@media screen and (max-width:750px) {
+    .containerPro .product{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .containerPro .product .cardPro{
+        width: 300px;
+    }
+
+
+}
+
+@media screen and (max-width:650px) {
+    .top .containerSearch i{
+        padding-inline:10px ;
+    }
+    .containerPro .product{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .top .logo{
+        width: 80px;
+        height: 80px;
+    }
+    .top .logo img{
+        width: 70px;
+    }
+
+    .containerNav{
+        padding-inline: 25px;
+    }
+    .containerNav .nav .icon a{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:550px) {
+
+
+    .containerNav{
+        padding-inline: 25px;
+    }
+    .containerNav .nav .icon a{
+        font-size: 1rem;
+    }
+}
+.containerPro .product .cardPro .titlePro{
+    background-color: rgb(153, 243, 243);
+    padding-inline: 20px;
+    padding-top: 7px;
+}
+.containerPro .product .cardPro .contact{
+    
+    font-size: 1.8rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.containerPro .product .cardPro .contact a{
+    padding: 15px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.containerPro .product .cardPro .contact a:first-child{
+    background-color: blue;
+}
+.containerPro .product .cardPro .contact a:first-child:hover{
+    background-color: rgb(5, 5, 204);
+}
+.containerPro .product .cardPro .contact a:last-child{
+    background-color: rgb(255, 132, 0);
+    color: rgb(255, 255, 255);
+}
+.containerPro .product .cardPro .contact a:last-child:hover{
+    background-color: rgba(255, 85, 0, 0.925);
+}
+.containerPro .product .cardPro .contact a:nth-child(2){
+    background-color: red;
+    color: rgb(255, 255, 255);
+}
+.containerPro .product .cardPro .contact a:hover:nth-child(2){
+    background-color: rgb(214, 6, 6);
+    
+
+}
